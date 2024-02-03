@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('parts/headers.ejs'); %>
+    <title><% if (title) { %><%- title %><% } else { %><%- vars.defaultTitle %><% } %> - <%- vars.appName %></title>
+</head>
+<body>
+<%- include('parts/navbar.ejs'); %>
+<section class="container">
+    <div class="staff-container">
+        <% for (const staffData of data) { %>
+            <div class="staff-card">
+                <div class="staff-card-image">
+                    <img src="<%- staffData.avatar %>" alt="<%- staffData.staff.nick || staffData.staff.user.displayName %>'s avatar">
+                    <span style="--status-color: <%- staffData.status.color %>;" class="staff-card-image-status"></span>
+                </div>
+                <div class="staff-card-header">
+                    <h2 class="staff-name"><%- staffData.staff.nick || staffData.staff.user.displayName %></h2>
+                </div>
+                <div class="staff-card-content">
+                    <ul class="staff-card-content-ul">
+                        <li>
+                            <span class="bold">Job:</span>
+                            <span class="role" style="--role-color: <%- staffData.highestRole.hexColor + "8E" %>; --role-color-transparent: <%- staffData.highestRole.hexColor + "56" %>"><%- staffData.highestRole.name %></span>
+                        </li>
+                        <li>
+                            <span class="bold">Discord Username:</span>
+                            <span class="code"><%- staffData.staff.user.username %></span>
+                        </li>
+                    </ul>
+                    <p class="custom-status <%- staffData.hasCustomStatus ? "" : "no-status" %>"><%- staffData.customStatus %></p>
+                </div>
+            </div>
+        <% } %>
+        <div class="staff-card">
+            <div class="staff-card-image">
+                <img src="/static/images/default_avatar.png" alt="Maybe you avatar">
+                <span class="staff-card-image-status"></span>
+            </div>
+            <div class="staff-card-header">
+                <h2 class="staff-name">unknown user</h2>
+            </div>
+            <div class="staff-card-content">
+                <p class="staff-content-p">
+                    This may be the start your story..<br/>
+                    Learn more on the <a href="/apply">apply page</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include('parts/footer.ejs'); %>
+</body>
+</html>

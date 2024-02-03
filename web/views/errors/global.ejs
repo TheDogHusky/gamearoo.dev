@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include("parts/headers.ejs"); %>
+    <title><%- code %> - <%- err.message %> - <%- vars.appName %></title>
+</head>
+<body>
+<section class="container full center">
+    <div class="err-404-body">
+        <h1><%- code %></h1>
+        <h2>Oops, an error occurred..</h2>
+        <p>
+            <%- err.message %><br/>
+            If you think this is an error, please <a href="/l/support">contact us</a>.
+        </p>
+        <a href="/">Go back Home?</a>
+    </div>
+</section>
+</body>
+</html>

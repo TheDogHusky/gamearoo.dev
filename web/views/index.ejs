@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('parts/headers.ejs'); %>
+    <script src="/static/three.min.js"></script>
+    <script src="/static/vanta.net.min.js"></script>
+    <title><% if (title) { %><%- title %><% } else { %><%- vars.defaultTitle %><% } %> - <%- vars.appName %></title>
+</head>
+<body>
+    <%- include('parts/navbar.ejs'); %>
+    <section class="container main">
+        <div class="special-container">
+            <h1 class="main-title">Gamearoo's Development</h1>
+            <p class="main-description">We make several projects such as Discord Bots, servers, etc..</p>
+        </div>
+        <div id="main-bg"></div>
+    </section>
+    <%- include('parts/footer.ejs'); %>
+    <script>
+        VANTA.NET({
+            el: "#main-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: "#800080",
+            backgroundColor: "#333333",
+            points: 12.00,
+            maxDistance: 19.00,
+            spacing: 16.00
+        })
+    </script>
+</body>
+</html>

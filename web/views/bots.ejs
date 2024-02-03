@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('parts/headers.ejs'); %>
+    <title><% if (title) { %><%- title %><% } else { %><%- vars.defaultTitle %><% } %> - <%- vars.appName %></title>
+</head>
+<body>
+<%- include('parts/navbar.ejs'); %>
+<section class="container">
+    <div class="bot-container">
+        <% for (const botData of data) { %>
+            <div class="bot-card">
+                <div class="bot-card-image">
+                    <img src="<%- botData.avatar %>" alt="<%- botData.bot.nick || botData.bot.user.displayName %>'s avatar">
+                    <span style="--status-color: <%- botData.status.color %>;" class="bot-card-image-status"></span>
+                </div>
+                <div class="bot-card-header">
+                    <h2 class="bot-name"><%- botData.bot.nick || botData.bot.user.displayName %></h2>
+                </div>
+                <div class="bot-card-content">
+                    <ul class="bot-card-content-ul">
+                        <li>
+                            <span class="bold">Type:</span>
+                            <span class="code type" style="--type-color: <%- botData.typeColor + "8E" %>;--type-color-transparent: <%- botData.typeColor + "56" %>"><%- botData.type %></span>
+                        </li>
+                        <li>
+                            <span class="bold">Version:</span>
+                            <span class="code version <%- botData.hasVersion ? "" : "no-version" %>"><%- botData.version %></span>
+                        </li>
+                    </ul>
+                    <div class="bot-card-content-ad">
+                        <p class="bot-description <%- botData.hasDescription ? "" : "no-description"%>"><%- botData.description %></p>
+                        <div class="custom-status <%- botData.hasCustomStatus ? "" : "no-status" %>"><img src="/static/images/discord-icons/activity_small.svg" alt=""><p><span><%- botData.customStatusType %></span> <span><%- botData.customStatus %></span></p></div>
+                    </div>
+                    <div class="bot-card-footer">
+                        <% if (botData.type === "public") { %>
+                            <a href="<%- botData.inviteLink %>" target="_blank">Invite</a>
+                        <% } else { %>
+                            <a href="/l/support" target="_blank">Support</a>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+        <div class="bot-card">
+            <div class="bot-card-image">
+                <img src="/static/images/default_avatar.png" alt="Maybe you avatar">
+                <span class="bot-card-image-status"></span>
+            </div>
+            <div class="bot-card-header">
+                <h2 class="bot-name">unknown bot</h2>
+            </div>
+            <div class="bot-card-content">
+                <p class="bot-content-p">
+                    This may be the start another bot..<br/>
+                    Learn more on our <a href="/l/support">Discord</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include('parts/footer.ejs'); %>
+</body>
+</html>
