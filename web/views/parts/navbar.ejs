@@ -1,0 +1,42 @@
+<header>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img class="nav-brand-img" src="<%- vars.appIconURL %>" alt="App Logo" width="16" height="16">
+            <a class="nav-brand-title" href="/"><%- vars.appName %></a>
+        </div>
+        <div class="nav-mobile-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-items">
+            <button class="nav-close-button">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <li class="nav-item">
+                <a href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="/rules">Rules</a>
+            </li>
+            <li class="nav-item">
+                <a href="/staff">Our Staff</a>
+            </li>
+            <li class="nav-item dropdown">
+                <div class="dropdown-button">
+                    <a href="/bots">Our Bots</a>
+                    <i class="bi bi-caret-down-fill dropdown-button-container" ui-target="dropdown-bots-content"></i>
+                </div>
+                <div class="dropdown-content" id="dropdown-bots-content">
+                    <ul>
+                        <li><a href="/bots">All Bots</a></li>
+                        <li><a href="/bots/apply">Apply</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="/l/support">Support</a>
+            </li>
+        </ul>
+    </nav>
+</header>
