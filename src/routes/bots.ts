@@ -40,6 +40,8 @@ export default class StaffRoute extends Route {
                     const customStatus = customActivity.name as string;
                     const botDescription = bot.description || "No description has been added to this bot for now."
                     const avatar = user.avatarURL({ extension:"webp" }) || user.displayAvatarURL({ extension: "webp" });
+                    var invite = `https://discord.com/oauth2/authorize?client_id=${bot.id}&scope=bot&permissions=8`;
+                    if(user.id === "564579659526832178") invite = "https://rambot.xyz"
                     botData.push({
                         bot: user,
                         avatar: avatar,
@@ -48,7 +50,7 @@ export default class StaffRoute extends Route {
                         description: botDescription,
                         version: bot.version,
                         type: bot.type,
-                        inviteLink: `https://discord.com/oauth2/authorize?client_id=${bot.id}&scope=bot&permissions=8`,
+                        inviteLink: invite,
                         typeColor: botColor[bot.type],
                         hasVersion: !(bot.version === "unknown"),
                         hasDescription: !(botDescription === "No description has been added to this bot for now."),

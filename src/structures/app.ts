@@ -44,7 +44,7 @@ export default class App {
         this.logger = new Logger({
             name: loggerName,
             colored: true,
-            timezone: "Europe/Paris",
+            timezone: "America/New_York",
             tzformat: 12,
             dirpath: "./logs",
             writelogs: true,
