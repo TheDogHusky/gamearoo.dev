@@ -12,5 +12,5 @@ COPY --from=builder /app/package-lock.json ./package-lock.json
 COPY --from=builder /app/web ./web
 RUN npm i --omit=dev
 
-EXPOSE 3000
+EXPOSE 80
 CMD ["node", "lib/index.js"]
