@@ -20,7 +20,7 @@ export default class App {
         middlewaresInitialized: false,
         routesInitialized: false
     };
-    private readonly logger: Logger;
+    public readonly logger: Logger;
     private localeVars = {
         defaultTitle: "Home - Gamearoo's Development",
         appName: "Gamearoo's Development",

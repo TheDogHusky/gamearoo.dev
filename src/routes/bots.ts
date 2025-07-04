@@ -36,13 +36,17 @@ export default class StaffRoute extends Route {
                 const guild = this.app._client.guilds.cache.get(this.app.config.discordData.guildId) || await this.app._client.guilds.fetch(this.app.config.discordData.guildId);
                 for (const bot of botList) {
                     if (bot.id === "1192533913386623137") bot.version = process.env.npm_package_version || "unknown"; // Support bot version
-                    const user = guild.members.cache.get(bot.id) || await guild.members.fetch(bot.id);
-                    const customActivity = user.presence?.activities[0] || { name: "This bot does not have any custom activity.", type: 111 };
+                    const user = guild.members.cache.get(bot.id) || await guild.members.fetch(bot.id).catch(() => null);
+                    if (!user) {
+                        this.app.logger.warn(`Bot with ID ${bot.id} is not in the guild, skipping...`, "StaffRoute");
+                        continue;
+                    }
+                    const customActivity = user?.presence?.activities[0] || { name: "This bot does not have any custom activity.", type: 111 };
                     const customStatus = customActivity.name as string;
                     const botDescription = bot.description || "No description has been added to this bot for now."
-                    const avatar = user.avatarURL({ extension:"webp" }) || user.displayAvatarURL({ extension: "webp" });
+                    const avatar = user?.avatarURL({ extension:"webp" }) || user?.displayAvatarURL({ extension: "webp" });
                     var invite = `https://discord.com/oauth2/authorize?client_id=${bot.id}&scope=bot&permissions=8`;
-                    if(user.id === "564579659526832178") invite = "https://rambot.xyz"
+                    if(user?.id === "564579659526832178") invite = "https://rambot.xyz"
                     botData.push({
                         bot: user,
                         avatar: avatar,
@@ -57,8 +61,8 @@ export default class StaffRoute extends Route {
                         hasDescription: !(botDescription === "No description has been added to this bot for now."),
                         hasCustomStatus: !(customStatus === "This bot does not have any custom activity."),
                         status: {
-                            color: discordStatusColor[user.presence?.status as string] || discordStatusColor.invisible,
-                            name: user.presence?.status
+                            color: discordStatusColor[user?.presence?.status as string] || discordStatusColor.invisible,
+                            name: user?.presence?.status
                         }
                     });
                 }
