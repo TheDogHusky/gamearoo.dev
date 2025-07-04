@@ -1,13 +1,13 @@
 import express from "express";
 import config from "../config";
-import {Logger} from "@classycrafter/super-logger";
+import { Logger } from "@classycrafter/super-logger";
 import fs from "fs";
 import LoggingMiddleware from "../middlewares/logging";
 import cors from "cors";
 import Route from "./route";
 import path from "path";
 import * as utils from "../utils";
-import {ActivityType, Client, GatewayIntentBits} from "discord.js";
+import { ActivityType, Client, GatewayIntentBits } from "discord.js";
 import NodeCache from "node-cache";
 
 export default class App {
@@ -18,15 +18,15 @@ export default class App {
         routesLoaded: false,
         middlewaresInitialized: false,
         routesInitialized: false
-    }
-    private logger: Logger;
+    };
+    public readonly logger: Logger;
     private localeVars = {
-        defaultTitle: "Home - " + config.name,
-        appName: config.name,
+        defaultTitle: "Home - Gamearoo's Development",
+        appName: "Gamearoo's Development",
         host: config.host,
         port: config.port,
         appIconURL: `/static/images/app-icon.png`,
-        copyrightDates: config.copyrightDates,
+        copyrightDates: `2023-${new Date().getFullYear()}`,
         domainName: config.domainName,
         email: {
             contactMail: `support@${config.domainName}`,
@@ -40,9 +40,8 @@ export default class App {
         this.app = express();
         this.port = config.port;
         this.config = config;
-        const loggerName = config.useAppNameForLogging ? config.name : config.loggingName
         this.logger = new Logger({
-            name: loggerName,
+            name: "Gamearoodev",
             colored: true,
             timezone: "America/New_York",
             tzformat: 12,
@@ -136,8 +135,7 @@ export default class App {
                 }]
             });
         });
-
-        this._client.login(this.config.discordData.botToken).catch(err => {
+        this._client.login(this.config.discordData.botToken).catch(() => {
             this.logger.error(`Discord connection failed; This may cause an outage.`);
         });
     }

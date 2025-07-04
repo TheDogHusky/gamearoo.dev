@@ -1,6 +1,6 @@
 import express from 'express';
-import {Logger} from "@classycrafter/super-logger";
-import {IInfos} from "../utils/typings";
+import { Logger } from "@classycrafter/super-logger";
+import { IInfos } from "../utils/typings";
 import Application from "./app";
 
 export default abstract class Route {

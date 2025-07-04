@@ -1,0 +1,24 @@
+[
+    {
+        "type": "public",
+        "id": "564579659526832178",
+        "version": "18.2.4",
+        "description": ""
+    },
+    {
+        "type": "public",
+        "id": "1144718992632717365",
+        "version": "unknown"
+    },
+    {
+        "type": "public",
+        "id": "1034976795444916334",
+        "version": "unknown"
+    },
+    {
+        "type": "private",
+        "id": "1192533913386623137",
+        "version": "unknown",
+        "description": "Support bot used as a connection between the gamearoo.dev website and Discord."
+    }
+]
