@@ -19,7 +19,7 @@ export default class StaffRoute extends Route {
             let staffList: Snowflake[] | undefined = this.app._cache.get("staffList");
             if (!staffList) {
                 // reduce time by caching the staffList instead of always calling a filter and cache.has function which is known on Discord.js issues for taking a lot of time
-                staffList = (await guild.members.fetch()).filter(m => m.roles.cache.has(this.app.config.discordData.staffRoleId)).map(m => m.id);
+                staffList = (await guild.members.fetch()).filter(m => m.roles.cache.has(this.app.config.discordData.staffRoleId) && !m.user?.bot).map(m => m.id);
                 this.app._cache.set("staffList", staffList);
             }
 
