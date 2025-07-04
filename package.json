@@ -27,9 +27,8 @@
     "version": "0.1.5",
     "main": "lib/index.js",
     "scripts": {
-        "test": "npm run start",
-        "start": "npm run build && node lib/index.js",
-        "build": "npx tsc",
+        "start": "yarn build && node lib/index.js",
+        "build": "yarn tsc --build src",
         "dev": "tsx watch src/index.ts"
     },
     "repository": {

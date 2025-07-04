@@ -7,5 +7,6 @@ services:
       - "80:3000"
     volumes:
       - ./logs:/app/logs
+      - ./bots.json:/app/bots.json
     env_file:
       - .env
