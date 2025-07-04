@@ -136,7 +136,7 @@ export default class App {
                 }]
             });
         });
-        this._client.login(this.config.discordData.botToken).catch(err => {
+        this._client.login(this.config.discordData.botToken).catch(() => {
             this.logger.error(`Discord connection failed; This may cause an outage.`);
         });
     }

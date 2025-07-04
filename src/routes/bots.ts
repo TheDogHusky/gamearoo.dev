@@ -69,7 +69,7 @@ export default class StaffRoute extends Route {
             res.render("bots", { title: "Bots", data: botData });
         });
 
-        this.router.get("/apply", (req, res, next) => {
+        this.router.get("/apply", (req, res) => {
             res.redirect("/l/support");
         });
     };
