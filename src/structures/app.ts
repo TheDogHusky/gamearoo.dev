@@ -9,7 +9,6 @@ import path from "path";
 import * as utils from "../utils";
 import { ActivityType, Client, GatewayIntentBits } from "discord.js";
 import NodeCache from "node-cache";
-import "express-async-errors";
 
 export default class App {
     public app: express.Application;
