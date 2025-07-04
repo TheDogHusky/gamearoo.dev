@@ -1,0 +1,41 @@
+[
+    {
+        "type": "public",
+        "id": "564579659526832178",
+        "version": "18.2.4",
+        "description": ""
+    },
+    {
+        "type": "private",
+        "id": "1125949058515738654",
+        "version": "0.1.0",
+        "description": "A music bot that once was public, but after Discord's ToS update blocking music bots became private."
+    },
+    {
+        "type": "public",
+        "id": "1144718992632717365",
+        "version": "unknown"
+    },
+    {
+        "type": "public",
+        "id": "1034976795444916334",
+        "version": "unknown"
+    },
+    {
+        "type": "private",
+        "id": "1192533913386623137",
+        "version": "unknown",
+        "description": "Support bot used as a connection between the gamearoo.dev website and Discord."
+    },
+    {
+        "type": "private",
+        "id": "1170227642281246750",
+        "version": "unknown",
+        "description": "A support bot for Gamearoo's Community."
+    },
+    {
+        "type": "public",
+        "id": "1150253891238232135",
+        "version": "1.0.0-beta4"
+    }
+]

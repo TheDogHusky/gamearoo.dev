@@ -1,4 +1,6 @@
 import * as bots from "../bots.json";
+import { config } from "dotenv";
+config();
 
 const port = 3000;
 const host = process.env.HOST || "localhost"; // Use environment variable or default to localhost

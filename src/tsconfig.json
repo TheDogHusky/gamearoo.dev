@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "rootDir": ".",
+        "outDir": "../lib/",
+        "resolveJsonModule": true,
+        "esModuleInterop": true
+    },
+    "references": [
+        { "path": "../" }
+    ]
+}

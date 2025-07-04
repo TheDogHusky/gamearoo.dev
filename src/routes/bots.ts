@@ -35,6 +35,7 @@ export default class StaffRoute extends Route {
                 botData = [];
                 const guild = this.app._client.guilds.cache.get(this.app.config.discordData.guildId) || await this.app._client.guilds.fetch(this.app.config.discordData.guildId);
                 for (const bot of botList) {
+                    if (bot.id === "1192533913386623137") bot.version = process.env.npm_package_version || "unknown"; // Support bot version
                     const user = guild.members.cache.get(bot.id) || await guild.members.fetch(bot.id);
                     const customActivity = user.presence?.activities[0] || { name: "This bot does not have any custom activity.", type: 111 };
                     const customStatus = customActivity.name as string;

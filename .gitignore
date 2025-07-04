@@ -130,5 +130,4 @@ dist
 .pnp.*
 
 lib
-src/config.ts
 .idea
