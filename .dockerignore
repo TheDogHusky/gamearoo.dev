@@ -1,0 +1,14 @@
+node_modules
+.env
+logs
+*.log
+Dockerfile
+docker-compose.yml
+start.sh
+.git
+.gitignore
+.vscode
+npm-debug.log
+yarn-error.log
+*.zip
+*.tar.gz
