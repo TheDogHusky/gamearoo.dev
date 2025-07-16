@@ -12,5 +12,5 @@ COPY --from=builder /app/yarn.lock ./yarn.lock
 COPY --from=builder /app/web ./web
 COPY --from=builder /app/node_modules ./node_modules
 
-EXPOSE 3000
+EXPOSE 80
 CMD ["node", "lib/index.js"]
