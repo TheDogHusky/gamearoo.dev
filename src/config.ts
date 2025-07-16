@@ -1,5 +1,6 @@
-import * as bots from "../bots.json";
-import * as projects from "../projects.json";
+import * as bots from "../data/bots.json";
+import * as projects from "../data/projects.json";
+import * as mods from "../data/mods.json";
 import { config } from "dotenv";
 config();
 
@@ -36,5 +37,8 @@ export default {
             name: string;
             url: string;
         }>
+    }>,
+    mods: mods as Array<{
+
     }>
 }
