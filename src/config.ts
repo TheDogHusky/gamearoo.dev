@@ -1,4 +1,5 @@
 import * as bots from "../bots.json";
+import * as projects from "../projects.json";
 import { config } from "dotenv";
 config();
 
@@ -26,5 +27,14 @@ export default {
     host,
     domainName,
     discordInvite,
-    discordData
+    discordData,
+    projects: projects as Array<{
+        name: string;
+        description: string;
+        image: string;
+        links: Array<{
+            name: string;
+            url: string;
+        }>
+    }>
 }

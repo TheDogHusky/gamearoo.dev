@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Ram Bot",
+        "description": "A free to use discord bot with all the features you can need (Moderation, Tickets, Applications, and more!).",
+        "image": "https://cdn.discordapp.com/avatars/564579659526832178/b2c39139c4c2d26f6062de20a349c32e.png",
+        "links": [
+            {
+                "name": "Website",
+                "url": "https://rambot.xyz/"
+            }
+        ]
+    },
+    {
+        "name": "Ram API",
+        "description": "An API that is mainly for Ram Bot but is publicly accessible. It has random images, random texts, some games and more!",
+        "image": "https://gamearoo.top/ram/pfp/ram%20and%20rem.png",
+        "links": [
+            {
+                "name": "Website",
+                "url": "https://api.rambot.xyz/"
+            }
+        ]
+    },
+    {
+        "name": "Ram API 2",
+        "description": "The new version of Ram API including more features like accounts. It's an API that is mainly for Ram Bot but is publicly accessible. It has random images, random texts, some games and more.",
+        "image": "https://gamearoo.top/ram/pfp/ram%20and%20rem.png",
+        "links": [
+            {
+                "name": "Website",
+                "url": "https://api2.rambot.xyz/"
+            }
+        ]
+    },
+    {
+        "name": "ram-api.js",
+        "description": "We understand using Ram API can be hard as it has a lot of endpoints and parameters to use. This package calls the API for you to make it easier. However, this won't bypass the rate-limit you'll still see the rate-limit error.",
+        "image": "https://camo.githubusercontent.com/c1d0e72b8289b0dacc49ba1ee5332d2824dd23896707f454cce61328910edda6/68747470733a2f2f67616d6561726f6f2e746f702f72616d2f72616d6170696a732e706e67",
+        "links": [
+            {
+                "name": "NPM Page",
+                "url": "https://www.npmjs.com/package/ram-api.js"
+            }
+        ]
+    },
+    {
+        "name": "discord-helper.js",
+        "description": "We understand JavaScript can be hard especially with discord.js. This package has logs and a send webhook to send discord embeds to a discord webhook! IT EVEN HAS MATH!!!!!!",
+        "image": "https://camo.githubusercontent.com/de9dab5cfb140df67bc286cacb410b0123bc8dc988bd98aa4194928a987a3c34/68747470733a2f2f67616d6561726f6f2e746f702f72616d2f642d682e6a732e706e67",
+        "links": [
+            {
+                "name": "NPM Page",
+                "url": "https://www.npmjs.com/package/discord-helper.js"
+            }
+        ]
+    },
+    {
+        "name": "File Share",
+        "description": "Share up to 100MB worth of data files to your friends!",
+        "image": "https://gamearoo.dev/logo.png",
+        "links": [
+            {
+                "name": "Website",
+                "url": "https://files.gamearoo.dev/"
+            }
+        ]
+    }
+]
