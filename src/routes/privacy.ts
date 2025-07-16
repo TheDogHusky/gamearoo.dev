@@ -12,7 +12,10 @@ export default class PrivacyRoute extends Route {
 
     public initializeRoutes() {
         this.router.get("/", (req, res) => {
-            res.render("privacy", { title: "Privacy Policy" });
+            res.render("privacy", {
+                title: "Privacy Policy",
+                description: "The privacy policy for Gamearoo's Development services."
+            });
         });
     };
 }

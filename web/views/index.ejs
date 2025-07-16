@@ -1,10 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <%- include('parts/headers.ejs'); %>
+    <%- include('parts/headers.ejs', { title, description }); %>
     <script src="/static/three.min.js"></script>
     <script src="/static/vanta.net.min.js"></script>
-    <title><% if (title) { %><%- title %><% } else { %><%- vars.defaultTitle %><% } %> - <%- vars.appName %></title>
 </head>
 <body>
     <%- include('parts/navbar.ejs'); %>

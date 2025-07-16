@@ -21,7 +21,7 @@ export default class App {
     };
     public readonly logger: Logger;
     private localeVars = {
-        defaultTitle: "Home - Gamearoo's Development",
+        defaultTitle: "Gamearoo's Development",
         appName: "Gamearoo's Development",
         host: config.host,
         port: config.port,

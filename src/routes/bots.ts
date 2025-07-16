@@ -70,7 +70,11 @@ export default class StaffRoute extends Route {
                 this.app._cache.set("botData", botData);
             }
 
-            res.render("bots", { title: "Bots", data: botData });
+            res.render("bots", {
+                title: "Bots",
+                data: botData,
+                description: "A collection of bots created by the Gamearoo team.",
+            });
         });
 
         this.router.get("/apply", (req, res) => {

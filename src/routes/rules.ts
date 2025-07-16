@@ -12,7 +12,10 @@ export default class RulesRoute extends Route {
 
     public initializeRoutes() {
         this.router.get("/", (req, res) => {
-            res.render("rules", { title: "Rules" });
+            res.render("rules", {
+                title: "Rules",
+                description: "The rules of Gamearoo's Development stuff."
+            });
         });
     };
 }

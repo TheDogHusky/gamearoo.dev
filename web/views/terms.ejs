@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <%- include("parts/headers.ejs"); %>
-    <title><% if (title) { %><%- title %><% } else { %><%- vars.defaultTitle %><% } %> - <%- vars.appName %></title>
+    <%- include('parts/headers.ejs', { title, description }); %>
 </head>
 <body>
     <%- include("parts/navbar.ejs"); %>

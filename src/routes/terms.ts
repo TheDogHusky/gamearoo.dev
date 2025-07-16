@@ -12,7 +12,10 @@ export default class TermsRoute extends Route {
 
     public initializeRoutes() {
         this.router.get("/", (req, res) => {
-            res.render("terms", { title: "Terms" });
+            res.render("terms", {
+                title: "Terms",
+                description: "The terms of service for Gamearoo's Development services."
+            });
         });
     };
 }

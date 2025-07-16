@@ -1,5 +1,5 @@
 import Route from "../structures/route";
-import {Logger} from "@classycrafter/super-logger";
+import { Logger } from "@classycrafter/super-logger";
 import Application from "../structures/app";
 
 export default class IndexRoute extends Route {
@@ -12,7 +12,10 @@ export default class IndexRoute extends Route {
 
     public initializeRoutes() {
         this.router.get("/", (req, res) => {
-            res.render("index", { title: "Home" });
+            res.render("index", {
+                title: "Home",
+                description: "Welcome to Gamearoo's Development services. We provide a range of tools and services to help you.",
+            });
         });
     };
 }

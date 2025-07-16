@@ -8,5 +8,6 @@ services:
     volumes:
       - ./logs:/app/logs
       - ./bots.json:/app/bots.json
+      - ./projects.json:/app/projects.json
     env_file:
       - .env

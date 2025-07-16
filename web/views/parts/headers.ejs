@@ -5,3 +5,16 @@
 <link rel="stylesheet" href="/static/main.css">
 <link rel="icon" href="/static/images/favicon.ico">
 <script src="/static/script.js"></script>
+<% if (typeof description !== "undefined" && description) { %>
+    <meta name="description" content="<%- description %>">
+    <meta property="og:description" content="<%- description %>">
+    <meta name="twitter:description" content="<%- description %>">
+<% } %>
+<meta property="og:title" content="<%- title ? title + " - " + vars.appName : vars.defaultTitle %>">
+<meta name="twitter:title" content="<%- title ? title + " - " + vars.appName : vars.defaultTitle %>">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://<%- vars.domainName %>">
+<meta name="twitter:url" content="https://<%- vars.domainName %>">
+<meta name="theme-color" content="#800080">
+<title><%- title ? title + " - " + vars.appName : vars.defaultTitle %></title>

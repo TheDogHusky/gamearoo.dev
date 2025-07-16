@@ -58,7 +58,11 @@ export default class StaffRoute extends Route {
                 this.app._cache.set("staffData", staffData);
             }
 
-            res.render("staff", { title: "Staff", data: staffData });
+            res.render("staff", {
+                title: "Staff",
+                data: staffData,
+                description: "The staff team of Gamearoo, the people who help you with your issues and make sure everything is running smoothly."
+            });
         });
     };
 }
